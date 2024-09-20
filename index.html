@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 관리 시스템</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>학생 관리 시스템</h2>
+
+        <h3>반 별 정원 입력</h3>
+        <input type="number" id="class1" placeholder="반 1 정원 입력">
+        <input type="number" id="class2" placeholder="반 2 정원 입력">
+        <input type="number" id="class3" placeholder="반 3 정원 입력">
+        <button onclick="setClassCapacity()">정원 설정</button>
+
+        <h3>학번 입력</h3>
+        <input type="number" id="studentID" placeholder="학번 입력 (형식: 21101)">
+        <button onclick="addStudent()">학생 추가</button>
+
+        <h3>입력된 학생 수 및 비율 보기</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>반 번호</th>
+                    <th>정원</th>
+                    <th>학생 수</th>
+                    <th>비율</th>
+                </tr>
+            </thead>
+            <tbody id="classStats">
+                <tr>
+                    <td>반 1</td>
+                    <td id="class1Capacity">0</td>
+                    <td id="class1Count">0</td>
+                    <td id="class1Percentage">0%</td>
+                </tr>
+                <tr>
+                    <td>반 2</td>
+                    <td id="class2Capacity">0</td>
+                    <td id="class2Count">0</td>
+                    <td id="class2Percentage">0%</td>
+                </tr>
+                <tr>
+                    <td>반 3</td>
+                    <td id="class3Capacity">0</td>
+                    <td id="class3Count">0</td>
+                    <td id="class3Percentage">0%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
